@@ -1,0 +1,214 @@
+/* Importando a fonte Poppins e Nunito do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+/* Fundo com gradiente, linhas diagonais e figuras geométricas */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Fonte arredondada */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0077b6, #8338ec);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container principal */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Trazer os elementos principais para frente */
+  padding-bottom: 60px; /* Garantir que o footer não sobreponha o conteúdo */
+}
+
+/* Estilo do cabeçalho criativo */
+.creative-header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border: 3px solid black;
+  background: linear-gradient(135deg, #007bff, #5a9bd8);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  animation: headerPulse 2s infinite ease-in-out; /* Adiciona animação de pulsação */
+}
+
+/* Animação de pulsação do cabeçalho */
+@keyframes headerPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Título criativo */
+.creative-title {
+  font-size: 2.5em;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Fonte arredondada */
+  transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Efeitos de hover no título */
+.creative-title:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo dos botões */
+button {
+  width: 250px;
+  padding: 20px 15px;
+  margin: 10px 0;
+  font-size: 1em;
+  border: 2px solid black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Nunito', sans-serif; /* Fonte diferente para os botões */
+  font-weight: bold; /* Tornando o texto dos botões em negrito */
+}
+
+/* Botão de fundo */
+.big-button { 
+  background-color: #28a745; 
+  font-size: 40px;
+  width: 300px;
+  padding: 20px 5px;
+}
+.medium-button { background-color: #ffc107;
+  font-size: 40px;
+  width: 300px;
+  padding: 20px 5px; 
+}
+.small-button { background-color: #dc3545;
+  width: 300px;
+  padding: 10px 5px; 
+}
+.map-button { background-color: #17a2b8;
+  width: 300px;
+  padding: 10px 5px;
+}
+
+/* Efeitos de hover nos botões */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Figuras geométricas no fundo */
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Círculo no fundo */
+body::after {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  width: 300px;
+  height: 300px;
+  top: 30%;
+  left: 80%;
+}
+
+/* Triângulo no fundo */
+body::before {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid rgba(255, 255, 255, 0.2);
+  top: 70%;
+  left: 20%;
+}
+
+/* Rodapé com disclaimer */
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em; /* Tamanho pequeno para o disclaimer */
+  position: fixed;
+  bottom: 0; /* Fixa o disclaimer na parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none; /* Removido a sombra do disclaimer */
+}
+
+/* Estilo para o emoji de alerta */
+footer span {
+  font-weight: bold;
+  color: #000000; /* Cor para o emoji de perigo */
+}
+
+footer .warning {
+  font-size: 1.2em; /* Emoji de perigo maior */
+}
+
+/* Responsividade para o footer em telas pequenas */
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.7em; /* Reduz o tamanho do texto em telas menores */
+    padding: 8px;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .creative-title {
+    font-size: 1.5em;
+  }
+
+  button {
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    font-size: 0.9em;
+  }
+}

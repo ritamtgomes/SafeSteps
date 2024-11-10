@@ -1,0 +1,55 @@
+/* src/pages/LetMeHelp.css */
+.let-me-help-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.button-section {
+  margin-top: 40px;
+}
+
+.action-button {
+  color: white;
+  border: 2px solid black; /* Add black border to the buttons */
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: background-color 0.9s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button:hover {
+  opacity: 1.0;
+}
+
+/* Button specific styles */
+.food-button {
+  background-color: #ff5722; /* Orange for food */
+}
+
+.sleep-button {
+  background-color: #3f51b5; /* Blue for sleep (previously accommodation) */
+}
+
+.company-button {
+  background-color: #4caf50; /* Green for company */
+}
+
+.love-button {
+  background-color: #f44336; /* Red for love */
+}
+
+/* Optional: You can style the emojis to make them larger */
+.food-button span,
+.sleep-button span,
+.company-button span,
+.love-button span {
+  font-size: 24px; /* Adjust the size of the emoji */
+  margin-right: 10px; /* Add some space between the emoji and text */
+}
